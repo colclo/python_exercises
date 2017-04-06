@@ -22,8 +22,11 @@ with open(r'文档的路径','r') as r:
 class url_parser(HTMLParser):
   def __init__(self):
     super(url_parser,self).__init__()
+    self.h2_flag = False
     self.flag = False
     self.verbatim = 0
    
   def handle_starttag(self,tag,attrs):
-    
+    #抓标题
+    if tag=='h2' and attrs:
+          if self.h2_flag==
