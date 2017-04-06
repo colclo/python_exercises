@@ -1,7 +1,12 @@
 
 '''
 标题：<h2 class="tc">2016年度&ldquo;四在农家.美丽乡村&rdquo;省级新农村建设示范项目废标公告</h2>
-
+     注意：tag和attrs都唯一，可以直接解析。标题中会有特殊字符，解析别落下
+采购人：<tr><td class='title'>采购单位</td><td colspan='3'>三都县农村工作局</td></tr>
+代理机构：<tr><td class='title'>代理机构名称</td><td colspan='3'>广西建通工程咨询有限责任公司</td></tr>
+品目：<tr><td class='title'>品目</td><td colspan='3'><p>服务/信息技术服务/数据处理服务/数字内容加工处理服务</p></td></tr>
+     注意：标签和属性都不唯一，要根据内容来筛选
+行政区域：根据采购人所得，可写个简单的字典来查询，同时方便添加
 '''
 from html.parser import HTMLParser
 from urllib import request
