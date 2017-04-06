@@ -1,0 +1,24 @@
+
+'''
+标题：<h2 class="tc">2016年度&ldquo;四在农家.美丽乡村&rdquo;省级新农村建设示范项目废标公告</h2>
+
+'''
+from html.parser import HTMLParser
+from urllib import request
+
+#定义全局变量用于存放URL的list
+url_list=[]
+
+#将URL读入list中
+with open(r'文档的路径','r') as r:
+  global url_list=r.readlines()
+
+#定义解析类
+class url_parser(HTMLParser):
+  def __init__(self):
+    super(url_parser,self).__init__()
+    self.flag = False
+    self.verbatim = 0
+   
+  def handle_starttag(self,tag,attrs):
+    
